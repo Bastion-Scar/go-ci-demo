@@ -24,3 +24,12 @@ jobs:
 
       - name: run tests
         run: go test -v -cover
+
+      - name: Building
+        run: go build -o myapp
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: myapp-binary
+          path: myapp
