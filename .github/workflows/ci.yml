@@ -25,6 +25,8 @@ jobs:
       - name: run tests
         run: go test -v -cover
 
+      - name: run benchmarks
+        run: go test ./... -bench=. -benchmem
       - name: Building
         run: go build -o myapp
 
